@@ -1,11 +1,12 @@
 import express from "express";
-import tasks from "./api/api";
+import cors from "cors";
+import routes from "./routes";
 
-const server = express();
-const port = 8080;
+const app = express();
 
-server.get("/", (req: express.Request, res: express.Response) => {
-  res.send({ tasks: tasks });
-});
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(routes);
 
-server.listen(port, () => console.log(`Express is listening at http://localhost:${port}`));
+app.listen({ port: 8080, host: "0.0.0.0" }, () => console.log("Server is running smoothly!"));
