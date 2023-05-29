@@ -3,9 +3,12 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #242c39;
+  background-color: rgba(255, 255, 255, 0.87);
+  background-image: radial-gradient(#dd8a0d 0.5px, transparent 0.5px),
+    radial-gradient(#dd8a0d 0.5px, #f5f5f5 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,16 +18,16 @@
 }
 
 a {
+  color: inherit;
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #ddc50d;
 }
 
 body {
-  margin: 0;
+  margin: auto;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -32,8 +35,15 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: "Poppins", sans-serif;
+  color: #ffc107;
+  font-size: 3em;
+  line-height: 1.2;
+}
+
+h2 {
+  color: #213547;
+  font-style: italic;
 }
 
 button {
